@@ -1,4 +1,5 @@
 import styles from "./style";
+import {Routes, Route} from 'react-router-dom';
 
 import {Navbar, Hero, Stats, Business, Billing, CardDeal, Testimonials, Clients, CTA, Footer} from "./components"
 
