@@ -1,36 +1,39 @@
 import styles from "./style";
-import {Routes, Route} from 'react-router-dom';
-
-import {Navbar, Hero, Stats, Business, Billing, CardDeal, Testimonials, Clients, CTA, Footer} from "./components"
+import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testimonials, Hero, About } from "./components";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => (
-  <div className="bg-primary w-full overflow-hidden">
-    <div className={`${styles.paddingX} ${styles.flexCenter}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Navbar/>
+  <BrowserRouter>  
+    <div className="bg-primary w-full overflow-hidden">
+      <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Navbar />
+          <Routes>
+            <Route path="/about" element={<About />}/>
+          </Routes>
+        </div>
+      </div>
+
+      <div className={`bg-primary ${styles.flexStart}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Hero />
+        </div>
+      </div>
+      
+      <div className={`bg-primary ${styles.paddingX} ${styles.flexCenter}`}>
+        <div className={`${styles.boxWidth}`}>
+          <Stats />
+          <Business />
+          <Billing />
+          <CardDeal />
+          <Testimonials />
+          <Clients />
+          <CTA />
+          <Footer />
+        </div>
       </div>
     </div>
-
-    <div className={`bg-primary ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Hero/>
-      </div>
-    </div>
-
-    <div className={`bg-primary ${styles.paddingX} ${styles.flexStart}`}>
-      <div className={`${styles.boxWidth}`}>
-        <Stats/>
-        <Business/>
-        <Billing/>
-        <CardDeal/>
-        <Testimonials/>
-        <Clients/>
-        <CTA/>
-        <Footer/>
-      </div>
-    </div>
-
-  </div>
+  </BrowserRouter>
 );
 
-export default App
+export default App;
