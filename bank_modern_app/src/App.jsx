@@ -3,14 +3,10 @@ import { Billing, Business, CardDeal, Clients, CTA, Footer, Navbar, Stats, Testi
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 const App = () => (
-  <BrowserRouter>  
     <div className="bg-primary w-full overflow-hidden">
       <div className={`${styles.paddingX} ${styles.flexCenter}`}>
         <div className={`${styles.boxWidth}`}>
           <Navbar />
-          <Routes>
-            <Route path="/about" element={<About />}/>
-          </Routes>
         </div>
       </div>
 
@@ -33,7 +29,6 @@ const App = () => (
         </div>
       </div>
     </div>
-  </BrowserRouter>
 );
 
 export default App;
