@@ -1,14 +1,23 @@
 import styles from "../style";
-
+import Navbar from "./Navbar";
 import React from 'react'
+import { AboutHero } from "../components";
+
 
 const About = () => (
-<div>
-    <h1 className='flex-1 font-poppins font-semibold ss:text-[72px] text-[52px] text-white ss:leading-[100px] leading-[75px]'>
-        The Next <br className='sm:block'/> {" "}
-        <span className='text-gradient'>Generation</span> {" "}
-    </h1>
-</div>
+    <div className="bg-primary w-full overflow-hidden">
+        <div className={`${styles.paddingX} ${styles.flexCenter}`}>
+            <div className={`${styles.boxWidth}`}>
+                <Navbar />
+            </div>
+        </div>
+
+        <div className={`bg-primary ${styles.flexStart}`}>
+            <div className={`${styles.boxWidth}`}>
+                <AboutHero />
+            </div>
+        </div>
+    </div>
 )
 
 export default About

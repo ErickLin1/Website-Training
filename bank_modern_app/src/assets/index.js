@@ -23,6 +23,7 @@ import twitter from "./twitter.svg";
 import people01 from "./people01.png";
 import people02 from "./people02.png";
 import people03 from "./people03.png";
+import stormGroup from "./stormGroup.png";
 
 export {
   airbnb,
@@ -46,6 +47,7 @@ export {
   facebook,
   instagram,
   linkedin,
+  stormGroup,
   twitter,
   people01,
   people02,
